@@ -1,0 +1,128 @@
+@font-face {
+    font-display: swap;
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Material Icons"), url("/fonts/MaterialIconsRound-Regular.otf");
+}
+@font-face {
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Sawarabi Mincho";
+    src: url("/fonts/SawarabiMincho-Regular.ttf") format("truetype");
+}
+
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
+
+.font-sawarabi {
+    font-family: "Sawarabi Mincho", sans-serif;
+}
+:root {
+    /* カラー定義 */
+    --furosiki_c_1: #eef3f8;
+    --furosiki_c_2: #1c1918;
+    --furosiki_c_3: #f1e3a7;
+    --furosiki_c_4: #cbb589;
+    --furosiki_c_5: #e54a46;
+    /* カラー定義その2 */
+    --status-poor: #e2534a;
+    --status-good: #339c76;
+    --status-excellent: #33769c;
+    /* ヘッダー高さ */
+    --header-height: 73px;
+    /* メディアクエリ */
+    --media-sm: 640px;
+    --media-md: 768px;
+    --media-lg: 1024px;
+    --media-xl: 1280px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Sawarabi Mincho", "Helvetica Neue", Arial,
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: var(--furosiki_c_2);
+    background-color: var(--furosiki_c_1);
+}
+
+.bg-furosiki_c_1 {
+    background-color: var(--furosiki_c_1);
+}
+.text-furosiki_c_1 {
+    color: var(--furosiki_c_1);
+}
+.border-furosiki_c_1 {
+    border-color: var(--furosiki_c_1);
+}
+
+.bg-furosiki_c_2 {
+    background-color: var(--furosiki_c_2);
+}
+.text-furosiki_c_2 {
+    color: var(--furosiki_c_2);
+}
+.border-furosiki_c_2 {
+    border-color: var(--furosiki_c_2);
+}
+
+.bg-furosiki_c_3 {
+    background-color: var(--furosiki_c_3);
+}
+.text-furosiki_c_3 {
+    color: var(--furosiki_c_3);
+}
+.border-furosiki_c_3 {
+    border-color: var(--furosiki_c_3);
+}
+
+.bg-furosiki_c_4 {
+    background-color: var(--furosiki_c_4);
+}
+.text-furosiki_c_4 {
+    color: var(--furosiki_c_4);
+}
+.border-furosiki_c_4 {
+    border-color: var(--furosiki_c_4);
+}
+
+.bg-furosiki_c_5 {
+    background-color: var(--furosiki_c_5);
+}
+.text-furosiki_c_5 {
+    color: var(--furosiki_c_5);
+}
+.border-furosiki_c_5 {
+    border-color: var(--furosiki_c_5);
+}
+.main-wrapper {
+    max-width: min(90vw, 1600px);
+    margin: 0 auto;
+    min-height: 100vh;
+}
+@media screen and (max-width: var(--media-sm)) {
+    .main-wrapper {
+        max-width: 100%;
+    }
+}
