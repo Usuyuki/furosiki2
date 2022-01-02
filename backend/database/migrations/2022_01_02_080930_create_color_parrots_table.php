@@ -15,7 +15,9 @@ class CreateColorParrotsTable extends Migration
     {
         Schema::create('color_parrots', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string("name")->comment("色名");
+            $table->string("description")->nullable()->comment("説明");
+            $table->string("color_hex")->nullable()->comment("色コード");
         });
     }
 

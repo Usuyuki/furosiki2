@@ -15,7 +15,22 @@ class CreateFurosikisTable extends Migration
     {
         Schema::create('furosikis', function (Blueprint $table) {
             $table->id();
+            $table->string("from")->nullable()->comment("送信者名");
+            $table->string("to")->nullable()->comment("受信者名");
+            $table->text("sentence")->nullable()->comment("添文");
+            $table->uuid("uuid")->unique()->comment("uuid");
+            $table->boolean("is_tategaki")->comment("縦書きフラグ");
+            $table->boolean("is_receive")->comment("受け取りフラグ");
+            $table->string("data_path")->comment("データパス");
+            $table->string("color")->comment("色");
+            $table->unsignedBigInteger("appearance_id")->comment("見た目id");
             $table->timestamps();
+
+
+            //他テーブルとの関連付け
+            $table->foreign('appearance_id')
+            ->references('id')
+            ->on('appearances');
         });
     }
 

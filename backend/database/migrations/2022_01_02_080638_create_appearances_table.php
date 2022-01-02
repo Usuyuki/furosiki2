@@ -15,7 +15,10 @@ class CreateAppearancesTable extends Migration
     {
         Schema::create('appearances', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string("name")->comment("見た目名");
+            $table->string("description")->nullable()->comment("説明");
+
+
         });
     }
 
