@@ -1,4 +1,4 @@
-@extends("layouts.noLogIn")
+@extends("layouts.withIndex")
 @section("title","トップ")
 
 @section('header')

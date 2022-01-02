@@ -21,3 +21,4 @@
     </div> --}}
     <p class="text-center mt-2 copyright">Copyright (c) {{date("Y")}} usuyuki</p>
 </footer>
+<script type="text/javascript" src="{{ asset('js/furosikiMain.js') }}?ver=1.1"></script>
