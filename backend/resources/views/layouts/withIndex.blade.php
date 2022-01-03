@@ -14,9 +14,9 @@
     <!---ヘッダーここまで--->
 
     <!---コンテンツここから--->
-    <div class="main-wrapper">
+    <main class="scroll-container ">
         @yield('content')
-    </div>
+    </main>
     <!----コンテンツここまで--->
     <!---フッターここから--->
     @component('components.basis.footer')

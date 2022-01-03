@@ -60,16 +60,30 @@
 html {
     scroll-behavior: smooth;
 }
-hedaer {
+header {
+    width: 100vw;
     height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 body {
     font-family: "Sawarabi Mincho", "Helvetica Neue", Arial,
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     color: var(--furosiki_c_2);
     background-color: var(--furosiki_c_1);
+    height: 100vh;
 }
-
+main p {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.yokogaki {
+    -ms-writing-mode: inherit;
+    writing-mode: inherit;
+    text-orientation: inherit;
+}
 .bg-furosiki_c_1 {
     background-color: var(--furosiki_c_1);
 }
@@ -119,13 +133,37 @@ body {
 .border-furosiki_c_5 {
     border-color: var(--furosiki_c_5);
 }
-.main-wrapper {
+
+.scroll-container {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+.scroll-area {
+    scroll-snap-align: start;
     max-width: min(90vw, 1600px);
     margin: 0 auto;
+    height: 100vh;
     min-height: 100vh;
+    padding-top: var(--header-height);
 }
+/* calc(100vh - var(--header-height)) */
+
 @media screen and (max-width: var(--media-sm)) {
-    .main-wrapper {
+    .scroll-area {
         max-width: 100%;
     }
+}
+/* スクロールバー */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: url("/img/design/scrollBarULOCO.png");
+    border-radius: 5px;
 }

@@ -26,6 +26,12 @@ https://github.com/barryvdh/laravel-debugbar/blob/master/LICENSE
 
 # イラスト、画像、アイコン
 
+## 和柄
+
+ULOCO
+
+https://ja.forallcreators.com/terms-of-use/
+
 ## アイコン
 
 Material Icons
