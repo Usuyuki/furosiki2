@@ -22,7 +22,8 @@ class CreateFurosikisTable extends Migration
             $table->boolean("is_tategaki")->comment("縦書きフラグ");
             $table->boolean("is_receive")->comment("受け取りフラグ");
             $table->string("data_path")->comment("データパス");
-            $table->string("color")->comment("色");
+            $table->string("bg_color")->comment("背景色");
+            $table->string("stroke_color")->comment("柄色");
             $table->unsignedBigInteger("appearance_id")->comment("見た目id");
             $table->timestamps();
 

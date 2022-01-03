@@ -20,12 +20,14 @@ class Color_parrotTableSeeder extends Seeder
             [
                 'name'=>"高麗納戸",
                 'description'=>"濃い緑",
-                'color_hex'=>"2c4f54",
+                'bg_color'=>"2c4f54",
+                'stroke_color'=>"fff",
             ],
             [
                 'name'=>"さくらいろ",
                 'description'=>"濃い緑",
-                'color_hex'=>"fef4f4",
+                'bg_color'=>"fef4f4",
+                'stroke_color'=>"fff",
             ],
 
         ];

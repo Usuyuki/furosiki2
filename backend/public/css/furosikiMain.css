@@ -5,12 +5,21 @@
     font-weight: 400;
     src: local("Material Icons"), url("/fonts/MaterialIconsRound-Regular.otf");
 }
+
+/* さわらびみんちょうは縦書き崩れる */
 @font-face {
     font-display: swap;
     font-weight: 400;
     font-style: normal;
     font-family: "Sawarabi Mincho";
     src: url("/fonts/SawarabiMincho-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Hina Mincho";
+    src: url("/fonts/HinaMincho-Regular.ttf") format("truetype");
 }
 
 .material-icons {
@@ -38,6 +47,9 @@
 .font-sawarabi {
     font-family: "Sawarabi Mincho", sans-serif;
 }
+.font-hina {
+    font-family: "Hina Mincho", sans-serif;
+}
 :root {
     /* カラー定義 */
     --furosiki_c_1: #eef3f8;
@@ -60,19 +72,21 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    font-family: "Hina Mincho", "Helvetica Neue", Arial,
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: var(--furosiki_c_2);
+    background-color: var(--furosiki_c_1);
+    height: 100vh;
+}
 header {
+    font-family: "Sawarabi Mincho", "Helvetica Neue", Arial,
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     width: 100vw;
     height: var(--header-height);
     position: fixed;
     top: 0;
     left: 0;
-}
-body {
-    font-family: "Sawarabi Mincho", "Helvetica Neue", Arial,
-        "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    color: var(--furosiki_c_2);
-    background-color: var(--furosiki_c_1);
-    height: 100vh;
 }
 main p {
     -ms-writing-mode: tb-rl;

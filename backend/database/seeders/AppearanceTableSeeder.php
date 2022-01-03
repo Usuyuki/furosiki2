@@ -18,16 +18,18 @@ class AppearanceTableSeeder extends Seeder
     {
         $param=[
             [
-                'name'=>"標準",
+                'name'=>"唐草",
                 'description'=>"標準",
-            ],
-            [
-                'name'=>"お正月",
-                'description'=>"お正月",
+                'pattern_svg_path'=>"svg/",
+                'default_bg_color'=>"fff",
+                'default_stroke_color'=>"000",
             ],
             [
                 'name'=>"クリスマス",
                 'description'=>"クリスマス",
+                'pattern_svg_path'=>"svg/",
+                'default_bg_color'=>"fff",
+                'default_stroke_color'=>"000",
             ],
         ];
         DB::table("appearances")->insert($param);

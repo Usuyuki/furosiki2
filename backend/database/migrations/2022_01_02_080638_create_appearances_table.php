@@ -17,7 +17,9 @@ class CreateAppearancesTable extends Migration
             $table->id();
             $table->string("name")->comment("見た目名");
             $table->string("description")->nullable()->comment("説明");
-
+            $table->string("pattern_svg_path")->comment("柄のsvgパス");
+            $table->string("default_bg_color")->comment("背景色");
+            $table->string("default_stroke_color")->comment("柄色");
 
         });
     }

@@ -9,6 +9,9 @@ use Illuminate\Support\Str;
 class OkuruController extends Controller
 {
 
+    public function showForm(){
+        return view('furosiki.okuru.form');
+    }
     public function create(Request $request){
 
         // バリデーション

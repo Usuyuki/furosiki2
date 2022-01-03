@@ -17,7 +17,8 @@ class CreateColorParrotsTable extends Migration
             $table->id();
             $table->string("name")->comment("色名");
             $table->string("description")->nullable()->comment("説明");
-            $table->string("color_hex")->nullable()->comment("色コード");
+            $table->string("bg_color")->comment("背景色");
+            $table->string("stroke_color")->comment("柄色");
         });
     }
 
