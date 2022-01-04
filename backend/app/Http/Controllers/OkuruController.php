@@ -12,6 +12,9 @@ class OkuruController extends Controller
     public function showForm(){
         return view('furosiki.okuru.form');
     }
+    public function check(Request $request){
+        return view('furosiki.okuru.check');
+    }
     public function create(Request $request){
 
         // バリデーション
@@ -33,6 +36,9 @@ class OkuruController extends Controller
         Furosiki::create($form);
 
         return redirect('okutta');
+    }
+    public function done(){
+        return view('furosiki.okuru.okutta');
     }
 
 }
