@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,7 +11,7 @@ class Appearance extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "name","description"
+        "name", "description"
     ];
 
     //時間カラムの自動挿入無効化

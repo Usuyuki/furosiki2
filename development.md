@@ -1,8 +1,23 @@
-# 初回
+# ガチ初回
 
 ```
 mkdir backend
 make create-project
+make install-recommend-packages
+```
+
+これも
+
+```php
+declare(strict_types=1);
+```
+
+# ローカル最初
+
+※Windows は標準で make コマンド無いので、別途インストールまたは WSL 側でコマンド叩いて実行してください。
+
+```
+make init
 ```
 
 ## よく使うコマンド集
@@ -59,9 +74,3 @@ http://127.0.0.1:2650/
 
 メール  
 http://127.0.0.1:2651/
-
-port 番号を変える時
-
-nginx の conf,docker-compose をいじる
-
-mysql も変えるべき(3306 はかぶるので)
