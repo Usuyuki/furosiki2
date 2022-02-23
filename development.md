@@ -1,7 +1,3 @@
-# furosiki2
-
-![logo](https://user-images.githubusercontent.com/63891531/150684901-a0ce5d7c-dcc9-4bf1-a2b3-85c245a6a418.png)
-
 # 初回
 
 ```
@@ -63,3 +59,9 @@ http://127.0.0.1:2650/
 
 メール  
 http://127.0.0.1:2651/
+
+port 番号を変える時
+
+nginx の conf,docker-compose をいじる
+
+mysql も変えるべき(3306 はかぶるので)

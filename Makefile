@@ -14,14 +14,20 @@ create-project:
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
 install-recommend-packages:
+	# Laravel静的解析用
+	docker compose exec app composer require nunomaduro/larastan:^2.0 --dev
+	# dbカラムの変更用
 	docker compose exec app composer require doctrine/dbal
-	docker compose exec app composer require --dev ucan-lab/laravel-dacapo
+	# エディタのコード補完
 	docker compose exec app composer require --dev barryvdh/laravel-ide-helper
-	docker compose exec app composer require --dev beyondcode/laravel-dump-server
+	# bladeでのデバッグ向上
 	docker compose exec app composer require --dev barryvdh/laravel-debugbar
-	docker compose exec app composer require --dev roave/security-advisories:dev-master
-	docker compose exec app php artisan vendor:publish --provider="BeyondCode\DumpServer\DumpServerServiceProvider"
+	# 上記を動作させる用
 	docker compose exec app php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+	# 上記を動作させる用
+	docker compose exec app composer require --dev roave/security-advisories:dev-master
+	# docker compose exec app composer require --dev beyondcode/laravel-dump-server
+	docker compose exec app php artisan vendor:publish --provider="BeyondCode\DumpServer\DumpServerServiceProvider"
 init:
 	docker compose up -d --build
 	docker compose exec app composer install
@@ -129,3 +135,5 @@ ide-helper:
 	docker compose exec app php artisan ide-helper:generate
 	docker compose exec app php artisan ide-helper:meta
 	docker compose exec app php artisan ide-helper:models --nowrite
+stan:
+	docker compose exec app ./vendor/bin/phpstan analyse
