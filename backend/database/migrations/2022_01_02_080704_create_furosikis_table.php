@@ -24,14 +24,9 @@ class CreateFurosikisTable extends Migration
             $table->string("data_path")->comment("データパス");
             $table->string("bg_color")->comment("背景色");
             $table->string("stroke_color")->comment("柄色");
-            $table->unsignedBigInteger("appearance_id")->comment("見た目id");
+            // $table->string("cryptography")->comment("秘密の暗号");
+            $table->foreignId("appearance_id")->constrained()->comment("見た目id");
             $table->timestamps();
-
-
-            //他テーブルとの関連付け
-            $table->foreign('appearance_id')
-            ->references('id')
-            ->on('appearances');
         });
     }
 

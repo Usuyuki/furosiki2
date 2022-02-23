@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use Illuminate\Support\Str;
@@ -14,34 +16,34 @@ class FurosikiTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $param=[
+        $param = [
             [
-                'from'=>"うすゆき1",
-                'to'=>"うすゆき2",
-                'sentence'=>"テスト",
-                'uuid'=>Str::uuid(),
-                'is_tategaki'=>1,
-                'is_receive'=>0,
-                'data_path'=>"data/",
-                'bg_color'=>"fff",
-                'stroke_color'=>"000",
-                'appearance_id'=>1,
+                'from' => "うすゆき1",
+                'to' => "うすゆき2",
+                'sentence' => "テスト",
+                'uuid' => Str::uuid(),
+                'is_tategaki' => 1,
+                'is_receive' => 0,
+                'data_path' => "data/",
+                'bg_color' => "fff",
+                'stroke_color' => "000",
+                'appearance_id' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'from'=>"うすゆき1",
-                'to'=>"うすゆき2",
-                'sentence'=>"テスト",
-                'uuid'=>Str::uuid(),
-                'is_tategaki'=>1,
-                'is_receive'=>0,
-                'data_path'=>"data/",
-                'bg_color'=>"fff",
-                'stroke_color'=>"000",
-                'appearance_id'=>1,
+                'from' => "うすゆき1",
+                'to' => "うすゆき2",
+                'sentence' => "テスト",
+                'uuid' => Str::uuid(),
+                'is_tategaki' => 1,
+                'is_receive' => 0,
+                'data_path' => "data/",
+                'bg_color' => "fff",
+                'stroke_color' => "000",
+                'appearance_id' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

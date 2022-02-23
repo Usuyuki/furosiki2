@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use Illuminate\Support\Str;
@@ -14,22 +16,22 @@ class AppearanceTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $param=[
+        $param = [
             [
-                'name'=>"唐草",
-                'description'=>"標準",
-                'pattern_svg_path'=>"svg/",
-                'default_bg_color'=>"fff",
-                'default_stroke_color'=>"000",
+                'name' => "唐草",
+                'description' => "標準",
+                'pattern_svg_path' => "svg/",
+                'default_bg_color' => "fff",
+                'default_stroke_color' => "000",
             ],
             [
-                'name'=>"クリスマス",
-                'description'=>"クリスマス",
-                'pattern_svg_path'=>"svg/",
-                'default_bg_color'=>"fff",
-                'default_stroke_color'=>"000",
+                'name' => "クリスマス",
+                'description' => "クリスマス",
+                'pattern_svg_path' => "svg/",
+                'default_bg_color' => "fff",
+                'default_stroke_color' => "000",
             ],
         ];
         DB::table("appearances")->insert($param);

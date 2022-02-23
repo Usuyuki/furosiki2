@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use Illuminate\Support\Str;
@@ -14,20 +16,20 @@ class Color_parrotTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $param=[
+        $param = [
             [
-                'name'=>"高麗納戸",
-                'description'=>"濃い緑",
-                'bg_color'=>"2c4f54",
-                'stroke_color'=>"fff",
+                'name' => "高麗納戸",
+                'description' => "濃い緑",
+                'bg_color' => "2c4f54",
+                'stroke_color' => "fff",
             ],
             [
-                'name'=>"さくらいろ",
-                'description'=>"濃い緑",
-                'bg_color'=>"fef4f4",
-                'stroke_color'=>"fff",
+                'name' => "さくらいろ",
+                'description' => "濃い緑",
+                'bg_color' => "fef4f4",
+                'stroke_color' => "fff",
             ],
 
         ];
